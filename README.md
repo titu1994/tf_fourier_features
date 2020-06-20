@@ -41,19 +41,19 @@ Weight files are made available in the repository under the `Release` tab of the
 
 These weights generates the following output after 2000 epochs of training with batch size 8192 while using only 10% of the available pixels in the image during training phase.
 
-<img src="https://github.com/titu1994/tf_SIREN/blob/master/images/celtic_knot_10pct_kernel20.png?raw=true" height=100% width=100%>
+<img src="https://github.com/titu1994/tf_fourier_features/blob/master/images/celtic_knot_10pct_kernel20.png?raw=true" height=100% width=100%>
 
 ------
 
 If we train for using only 20% of the available pixels in the image during training phase - 
 
-<img src="https://github.com/titu1994/tf_SIREN/blob/master/images/celtic_knot_20pct_kernel20.png?raw=true" height=100% width=100%>
+<img src="https://github.com/titu1994/tf_fourier_features/blob/master/images/celtic_knot_20pct_kernel20.png?raw=true" height=100% width=100%>
 
 ------
 
 If we train for using only 30% of the available pixels in the image during training phase - .
 
-<img src="https://github.com/titu1994/tf_SIREN/blob/master/images/celtic_knot_30pct_kernel20.png?raw=true" height=100% width=100%>
+<img src="https://github.com/titu1994/tf_fourier_features/blob/master/images/celtic_knot_30pct_kernel20.png?raw=true" height=100% width=100%>
 
 # Citation
 
