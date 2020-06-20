@@ -23,6 +23,9 @@ class FourierFeatureProjection(tf.keras.layers.Layer):
         """
         super().__init__(**kwargs)
 
+        if 'dtype' in kwargs:
+            self._kernel_dtype = kwargs['dtype']
+
         gaussian_projection = int(gaussian_projection)
         gaussian_scale = float(gaussian_scale)
 
@@ -36,12 +39,12 @@ class FourierFeatureProjection(tf.keras.layers.Layer):
         if self.gauss_proj < 0:
             # Assume basic projection
             self.proj_kernel = tf.keras.layers.Dense(input_dim, use_bias=False, trainable=False,
-                                                     kernel_initializer='identity')
+                                                     kernel_initializer='identity', dtype=self.self._kernel_dtype)
 
         else:
             initializer = tf.keras.initializers.TruncatedNormal(mean=0.0, stddev=self.gauss_scale)
             self.proj_kernel = tf.keras.layers.Dense(self.gauss_proj, use_bias=False, trainable=False,
-                                                     kernel_initializer=initializer)
+                                                     kernel_initializer=initializer, dtype=self.self._kernel_dtype)
 
         self.built = True
 
