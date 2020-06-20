@@ -36,7 +36,7 @@ class FourierFeatureProjection(tf.keras.layers.Layer):
         # assume channel dim is always at last location
         input_dim = input_shape[-1]
 
-        if self.gauss_proj < 0:
+        if self.gauss_proj <= 0:
             # Assume basic projection
             self.proj_kernel = tf.keras.layers.Dense(input_dim, use_bias=False, trainable=False,
                                                      kernel_initializer='identity', dtype=self.self._kernel_dtype)
