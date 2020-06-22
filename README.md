@@ -57,7 +57,7 @@ If we train for using only 30% of the available pixels in the image during train
 
 # Results on Multi Image Inpainting
 
-It is possibly to encode multiple images into a single network by using an augmented input latent vector. The latent vector can be of any size (here, set to 8) and conditions the model to predict the pixel of a certain image, even when given the same (x,y) coordinate.
+It is possible to encode multiple images into a single network by using an augmented input latent vector. The latent vector can be of any size (here, set to 8) and conditions the model to predict the pixel of a certain image, even when given the same (x,y) coordinate for different images.
 
 The code to train this type of model is available in the `scripts` directory - `train_multi_inpainting_fourier.py` and `eval_multi_inpainting_fourier.py`. 
 
