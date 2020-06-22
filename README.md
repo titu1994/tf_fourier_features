@@ -55,6 +55,16 @@ If we train for using only 30% of the available pixels in the image during train
 
 <img src="https://github.com/titu1994/tf_fourier_features/blob/master/images/celtic_knot_30pct_kernel20.png?raw=true" height=100% width=100%>
 
+# Results on Multi Image Inpainting
+
+It is possibly to encode multiple images into a single network by using an augmented input latent vector. The latent vector can be of any size (here, set to 8) and conditions the model to predict the pixel of a certain image, even when given the same (x,y) coordinate.
+
+The code to train this type of model is available in the `scripts` directory - `train_multi_inpainting_fourier.py` and `eval_multi_inpainting_fourier.py`. 
+
+Below are the result of encoding 3 images in to a single model with 260K parameters, trained for 2000 epochs using 30% of the pixels per image as input training data at 800x800 pixel resolution. This is equivalent to training the model with 576K training samples.
+
+<img src="https://github.com/titu1994/tf_fourier_features/blob/master/images/multi_inpainting_30pct.png?raw=true" height=100% width=100%>
+
 # Citation
 
 ```
